@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+
+    <title>Pokédex</title>
+</head>
+
+<body>
+    <section id="container">
+        <header>
+            <!-- le nom avec une petite navigation liste et types -->
+            <h1>Pokédex</h1>
+
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Liste</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Types</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <section class="second">
+            <h2 class="détails">Détails de Herbizzare</h2>
+            
+            <section class="second_article">
+                <img class="pokemon_description" src="../public/img/2.png" alt="">
+
+                <article class="description">
+                    <h3>#2 Herbizzare</h3>
+                    <aside class="description_types">
+                        <p class="type plante">Plante</p>
+                        <p class="type poison">Poison</p>
+                    </aside>
+                    <h4>Statistiques</h4>
+                    <section class="table_stats">
+                        <article class="line_stats">
+                            <p class="stats">PV</p>
+                            <p class="stats">60</p>
+                            <meter class="stats_meter" min="0" max="300" low="50" high="200" optimum="150"
+                                value="60">60</meter>
+                        </article>
+                        <article class="line_stats">
+                            <p class="stats">Attaque</p>
+                            <p class="stats">62</p>
+                            <meter class="stats_meter" min="0" max="300" low="50" high="200" optimum="150"
+                                value="62">62</meter>
+                        </article>
+                        <article class="line_stats">
+                            <p class="stats">Défense</p>
+                            <p class="stats">63</p>
+                            <meter class="stats_meter" min="0" max="300" low="50" high="200" optimum="150"
+                                value="63">63</meter>
+                        </article>
+                        <article class="line_stats">
+                            <p class="stats">Attaque Spé.</p>
+                            <p class="stats">80</p>
+                            <meter class="stats_meter" min="0" max="300" low="50" high="200" optimum="150"
+                                value="80">80</meter>
+                        </article>
+                        <article class="line_stats">
+                            <p class="stats">Défense Spé.</p>
+                            <p class="stats">80</p>
+                            <meter class="stats_meter" min="0" max="300" low="50" high="200" optimum="150"
+                                value="80">80</meter>
+                        </article>
+                        <article class="line_stats">
+                            <p class="stats">Vitesse</p>
+                            <p class="stats">60</p>
+                            <meter class="stats_meter" min="0" max="300" low="50" high="200" optimum="150" value="60">60</meter>
+                        </article>
+
+
+                    </section>
+
+                </article>
+               
+            </section>
+            <nav class="bottom_nav"><a href="#">Revenir à la liste</a></nav>
+        </section>
+
+        <footer>
+            <p>Tous droits réserver à Nintendo&#169;</p>
+        </footer>
+    </section>
+
+</body>
+
+</html>

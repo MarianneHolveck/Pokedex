@@ -1,0 +1,174 @@
+body {
+  background-color: #c14040;
+  font-family: 'Bree Serif', serif;
+  margin: 3em;
+}
+
+#container {
+  width: 100em;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 1.5em 2em;
+  border-radius: 0.8em;
+  margin: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+li {
+  display: inline;
+  margin-left: 2em;
+  color: #c14040;
+}
+
+h1 {
+  color: #c14040;
+  font-size: 1.5em;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section_pokemon {
+  background-color: #982c2c;
+  padding: 1em;
+  margin: 0.5em;
+  width: calc((100%/3) - 1em);
+  height: 30em;
+  border-radius: 0.8em;
+  text-align: center;
+}
+
+h2 {
+  color: white;
+  font-size: 1.3em;
+  margin-top: 0.9em;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  margin: 1.5em 0.5em;
+  padding: 1em;
+  border-top: solid white 1px;
+}
+
+.détails {
+  text-align: center;
+  font-size: 3em;
+}
+
+.second_article {
+  display: flex;
+}
+
+.description {
+  background-color: #ab3838;
+  width: 100em;
+  margin: 0.5em;
+  margin-top: 1.5em;
+  padding: 2em;
+  color: white;
+  border-radius: 0.8em;
+}
+
+.line_stats {
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h3 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.description_types {
+  display: flex;
+  margin: 2em 0;
+}
+
+h4 {
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+}
+
+.stats {
+  width: 5.6em;
+}
+
+meter {
+  height: 3em;
+  width: 50em;
+}
+
+meter::-webkit-meter-bar {
+  background: #632b2b;
+  -webkit-box-shadow: inset 0 0 2px 2px #632b2b;
+  -moz-box-shadow: inset 0 0 2px 2px #632b2b;
+  box-shadow: inset 0 0 2px 2px #632b2b;
+}
+
+meter::-webkit-meter-bar,
+meter::-webkit-meter-optimum-value,
+meter::-webkit-meter-suboptimum-value,
+meter::-webkit-meter-even-less-good-value {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.pokemon_description {
+  height: max-content;
+}
+
+.type {
+  margin-right: 1.2em;
+  padding: 0.8em 0.5em;
+  border-radius: 0.8em;
+  width: 5em;
+  text-align: center;
+}
+
+.bottom_nav {
+  text-align: center;
+  color: white;
+  margin: 2em;
+}
+
+.link_type:hover {
+  color: yellow;
+  border-radius: 0.8em;
+  border: solid 0.1em yellow;
+  border-style: inset;
+}
+
+.link_type {
+  padding: 1em;
+  margin: 0.5em;
+  margin-top: 1em;
+  width: calc((100%/4) - 1em);
+  border-radius: 0.8em;
+  text-align: center;
+  color: white;
+  display: block;
+}
+
+.third {
+  margin: 2em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title_type {
+  margin: 2em;
+}
+
+
