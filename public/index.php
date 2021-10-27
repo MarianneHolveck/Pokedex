@@ -2,88 +2,78 @@
 
 //* Front Controller
 
-// inclure les dépendances composer
+// include our composer dependancy
 require __DIR__ . '/../vendor/autoload.php';
-// Grâce à ce fichier, les librairies se chargent automatiquement
 
-
-//* création d'une instance AltoRouter
-// on n'est pas dans une classe ni dans une fonction, donc on est dans le contexte global
+//* creation of an AltoRouter instance
 $router = new AltoRouter();
 
-//* on déclare à Altorouter que notre site est placé dans des sous-répertoires
-//dump($_SERVER); 
+//* we indicate where our files are
 $router->setBasePath($_SERVER['BASE_URI']);
-// $_SERVER['BASE_URI'] est créée via le .htaccess
 
-//* Tableau des routes
-// 1 route = 1 url + 1 nom de controller à instancier + 1 méthode à exécuter + 1 méthode HTTP + 1 identifiant
+//* road table
 
 $routes = [
-    //* la route 'HOME'
+    //* 'HOME'
     [
-        'GET', // méthode HTTP de la route
-        '/', // url de la route
+        'GET', // HTTP method
+        '/', // url 
         // target
         [ 
             'controller' => 'MainController',
-            'action' => 'home' // correspond à la méthode à exécuter
+            'action' => 'home' // method to use
         ],
-        'home' // identifiant unique de notre route 'home'
+        'home' 
     ],
-    //* la route 'pokemon'
+    //* 'pokemon'
     [
-        'GET', // méthode HTTP de la route
-        '/pokemon/[i:id]', // url de la route
+        'GET', // HTTP method
+        '/pokemon/[i:id]', // url 
         // target
         [ 
             'controller' => 'PokemonController',
-            'action' => 'pokemon' // correspond à la méthode à exécuter
+            'action' => 'pokemon' // method to use
         ],
-        'pokemon' // identifiant unique de notre route
+        'pokemon' 
     ],
-      //* la route 'types'
+      //* 'types'
     [
-        'GET', // méthode HTTP de la route
-        '/type', // url de la route
+        'GET', // HTTP method
+        '/type', // url
         // target
         [ 
             'controller' => 'TypeController',
-            'action' => 'type' // correspond à la méthode à exécuter
+            'action' => 'type' // method to use
         ],
-        'type' // identifiant unique de notre route
+        'type' 
     ],
-      //* la route 'type'
+      //* 'type'
       [
-        'GET', // méthode HTTP de la route
-        '/type/[i:id]', // url de la route
+        'GET', // HTTP method
+        '/type/[i:id]', // url 
         // target
         [ 
             'controller' => 'TypeController',
-            'action' => 'typeID' // correspond à la méthode à exécuter
+            'action' => 'typeID' // method to use
         ],
-        'typeID' // identifiant unique de notre route
+        'typeID' 
     ]
     
     ];
 
-//* Je transmets à Altorouter mon tableau qui contient toutes mes routes
+//* I give my roads to AltoRouter
 $router->addRoutes($routes);
 
 
-//* Début du dispatcher
+//* Dispatcher
 
 $match = $router->match();
 // dump($match);
 
 if ($match !== false) {
-    // On récupére avec altorouteur (le résultat de match()) les données de la route (mappé plus haut)
     $controllerToUse = 'Pokedex\\Controllers\\' . $match['target']['controller'];
     $methodToUse = $match['target']['action'];
 
-
-    // php peut utiliser une variable en tant que nom de la méthode
-    // $methodToUse est une chaîne de caractères, donc on peut transformer $mainController->$methodToUse() en $mainController->home();
     $controller = new $controllerToUse();
     $controller->$methodToUse($match['params']);
 }

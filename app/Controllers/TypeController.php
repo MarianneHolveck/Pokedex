@@ -7,12 +7,10 @@ use Pokedex\Models\Type;
 
 class TypeController extends CoreController
 {
-
+    // We get all different page
     function type($params)
     {
-        // $params est un array fourni par le dispatcher lors de l'appel à cette action
-        // il contient toutes les valeurs variables de la route courante
-        // ici pokemon/[i:id] => $params['id'] contient le numéro du  pokemon
+
         $modelType = new Type();
 
         $types = $modelType->findAll();
@@ -21,6 +19,7 @@ class TypeController extends CoreController
         $this->show('type', ['types' => $types]);
     }
 
+    // We get one specific type thanks to the link with the pokemon database
     function typeID($params)
     {
         $modelType = new Pokemon();

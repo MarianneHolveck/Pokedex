@@ -8,11 +8,10 @@ use Pokedex\Models\Type;
 class PokemonController extends CoreController
 {
 
+    // This method get us to one specific pokemon page
     function pokemon($params)
     {
-        // $params est un array fourni par le dispatcher lors de l'appel à cette action
-        // il contient toutes les valeurs variables de la route courante
-        // ici pokemon/[i:id] => $params['id'] contient le numéro du  pokemon
+        // $params has the value of the varible in the route
 
         $modelPokemon = new Pokemon();
 
