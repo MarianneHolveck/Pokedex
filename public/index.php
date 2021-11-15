@@ -11,6 +11,8 @@ $router = new AltoRouter();
 //* we indicate where our files are
 $router->setBasePath($_SERVER['BASE_URI']);
 
+// dd($_SERVER);
+
 //* road table
 
 $routes = [
